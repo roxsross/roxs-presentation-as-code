@@ -1,0 +1,300 @@
+/* @theme docker */
+/* @auto-scaling true */
+
+:root {
+  --docker-blue: #2496ed;
+  --docker-blue-dark: #0b4f8a;
+  --docker-navy: #0b2740;
+  --ink: #16222e;
+  --muted: #5f6f7f;
+  --bg: #f4f8fc;
+  --panel: #ffffff;
+  --code-bg: #0b2033;
+  --code-ink: #e7f0f8;
+  --border: #dce8f2;
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  padding: 68px 86px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.45;
+}
+
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(36,150,237,.16), transparent 32%),
+    linear-gradient(135deg, #f7fbff 0%, #eef6fc 100%);
+}
+
+section.lead h1 {
+  font-size: 76px;
+  margin-bottom: 14px;
+}
+
+section.lead h2 {
+  padding-left: 0;
+  font-size: 38px;
+  color: var(--docker-blue-dark);
+}
+
+section.lead h2::before {
+  display: none;
+}
+
+h1 {
+  color: var(--docker-navy);
+  font-size: 66px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  color: var(--docker-navy);
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  margin-bottom: 24px;
+  padding-left: 22px;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 8px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--docker-blue) 0%, var(--docker-blue-dark) 100%);
+}
+
+p {
+  margin: 14px 0;
+}
+
+strong {
+  color: var(--docker-blue-dark);
+}
+
+ul, ol {
+  margin-top: 18px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 8px;
+}
+
+ul li {
+  position: relative;
+  padding-left: 30px;
+  margin: 10px 0;
+}
+
+ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--docker-blue);
+  font-weight: 800;
+}
+
+ol li {
+  margin: 10px 0;
+}
+
+pre {
+  position: relative;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  border-radius: 16px;
+  padding: 44px 28px 22px 28px;
+  box-shadow: 0 12px 28px rgba(11, 39, 64, .16);
+  margin-top: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+pre::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 22px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 22px 0 0 #ffbd2e, 44px 0 0 #27c93f;
+}
+
+pre code {
+  color: var(--code-ink);
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 25px;
+  line-height: 1.55;
+}
+
+code {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 26px;
+  background: var(--panel);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(11, 39, 64, .08);
+}
+
+th, td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: #eaf4fc;
+  color: var(--docker-navy);
+  font-weight: 800;
+}
+
+blockquote {
+  border-left: 6px solid var(--docker-blue);
+  margin-left: 0;
+  padding: 14px 24px;
+  background: #eaf4fc;
+  border-radius: 10px;
+}
+
+section::after {
+  color: var(--docker-blue-dark);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Arquitectura Docker */
+.docker-arch-top,
+.docker-arch-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.docker-arch-top {
+  margin-top: 36px;
+}
+
+.docker-arch-bottom {
+  margin-top: 28px;
+}
+
+.arch-card {
+  width: 230px;
+  min-height: 118px;
+  padding: 18px 18px 16px;
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(11, 39, 64, .10);
+}
+
+.arch-card strong {
+  display: block;
+  color: var(--docker-navy);
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.arch-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.arch-icon {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.arch-arrow {
+  color: var(--docker-blue);
+  font-size: 34px;
+  font-weight: 800;
+  min-width: 28px;
+  text-align: center;
+}
+
+.arch-main {
+  background: linear-gradient(180deg, #f5fbff 0%, #e8f5fe 100%);
+  border-color: var(--docker-blue);
+  box-shadow: 0 12px 28px rgba(36, 150, 237, .18);
+}
+
+.arch-hub {
+  background: linear-gradient(180deg, #f9fbff 0%, #eff6ff 100%);
+  border-color: #7aaed3;
+}
+
+.arch-soft {
+  background: #fbfdff;
+}
+
+
+/* Acciones compactas para slides de demo */
+.demo-actions {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.demo-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(11, 39, 64, .07);
+}
+
+.demo-action-icon {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.demo-action strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--docker-navy);
+  font-size: 22px;
+}
+
+.demo-action code {
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--docker-blue-dark);
+  background: #eaf4fc;
+  border-radius: 8px;
+  padding: 5px 9px;
+  font-size: 18px;
+}

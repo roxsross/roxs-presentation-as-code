@@ -1,0 +1,6 @@
+html: true
+theme: ./docker.css
+size: 16:9
+
+options:
+  allowLocalFiles: true

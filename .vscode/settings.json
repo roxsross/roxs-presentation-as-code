@@ -1,0 +1,6 @@
+{
+  "markdown.marp.themes": [
+    "./docker.css"
+  ],
+  "markdown.marp.html": "all"
+}
